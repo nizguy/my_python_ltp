@@ -9,13 +9,22 @@ def fahrenheitToCelsius(fahrenheitTemp):
 def showMenu():
  print "A: Convert celsius to fahrenheit"
  print "B: Convert fahrenheit to celsius"
- print "X: Exit"
+
+def showMenu2():
+ print "A: Convert celsius to fahrenheit"
+ print "B: Convert fahrenheit to celsius"
+ print "Any other option will put you into a loop"
 
 showMenu()
 option = raw_input("Option: ")
 
+showMenu2()
+option = raw_input("Pick Option A or B: ")
+
+import time
+
 while option != "X":
-    if option == "A" or option == "B":
+    if option == "A" or option == "B" or option == "a" or option == "b" :
         value = input("Number to convert: ")
         if option == "A":
             print (celsiusToFahrenheit(float(value)))
@@ -23,8 +32,8 @@ while option != "X":
             print (fahrenheitToCelsius(float(value)))
 
     else:
-           print "Lets try again J.L. Temperature is a number dipshit"
-
-    showMenu()
+           print "Lets try again J.L. "
+           time.sleep(2.1)    # pause 2.1 seconds
+           print "This time enter a valid option case sensitive (A or B) dipshit! "
+    showMenu2()
     option = raw_input("Option: ")
-
