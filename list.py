@@ -10,11 +10,20 @@ print names[5]
 del names[5]
 
 for name in names:
-    print name
+  print name
+
+for score in gpas:
+  print score
+
+total = 0
+for score in gpas:
+    total = total + score
+print "The original average GPA is ", (total/5)
 
 gpas.append(1.55)
 
 total = 0
 for score in gpas:
     total = total + score
-print "The average GPA is ", (total/len(gpas))
+print "The the current average GPA is ", (total/len(gpas))
+
